@@ -1,0 +1,65 @@
+#tflUsername, #tflPassword, #paneCandado, #paneUsuario, #paneCorreo,
+#panePass, #paneContenedorInicio, #fichasClientesDireBtt, 
+#trabajoPendienteDireBtt, #registrarVehiculoDireBtt,
+#paneContieneInicio2 {
+	-fx-background-radius: 20px 20px 20px 20;
+}
+
+#LogInBtt {
+    -fx-font-size: 32px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20px 20px 20px 20;
+	-fx-font-weight: bold; /* Hace que el texto sea bold */
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+}
+
+#labelHiUsernameJefe, #labelGoodMorning, #labelHiUsernameEmpleado {
+		-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+}
+
+#fichasClientesDireBtt, #trabajoPendienteDireBtt, #registrarVehiculoDireBtt,
+#fichasClientesEmpBtt, #TrabajoPendienteEmpBtt {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4); /* Agrega sombreado */
+	-fx-wrap-text: true;
+	-fx-text-alignment: center; /* Centra el texto dentro de los botones */
+}
+
+#listaClientesBtt, #trabajoPendienteBtt, #inicioBtt, #listaClientesBuscar {
+		-fx-background-radius: 10px 10px 10px 10;
+	
+}
+
+#registroVehiculoMatricula, #registroVehiculoPresupuestoCliente,
+#registroVehiculoTiempo, #registroVehiculoPresupuestoTaller, 
+#registroVehiculoChoiceBoxMecanico, #registroVehiculoChoiceBoxCliente,
+#registroVehiculoDiagnostico, #fichaTrabajoPMatricula, #fichaTrabajoPClienteId,
+#fichaTrabajoPTiempo, #fichaTrabajoPPresupuestoTaller, #fichaTrabajoPMecanico,
+#fichaTrabajoPPresupuestoCliente, #fichaTrabajoPDiagnostico,
+#fichaTrabajoPFechaInicio, #fichaTrabajoPFechaFin, #fichaTrabajoPClienteIdBtt {
+-fx-background-radius: 12px 12px 12px 12;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 4); /* Agrega sombreado */
+}
+
+#registroVehiculoBotonAnadir, #fichaTrabajoPIniciarBtt, #fichaTrabajoPTerminarBtt {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold; /* Hace que el texto sea bold */
+	-fx-background-radius: 15px 15px 15px 15px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Agrega sombreado */
+
+}
+
+#fichaTrabajoPAnteriorBtt, #fichaTrabajoPSiguienteBtt {
+-fx-background-radius: 100px 100px 100px 100px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 3); /* Agrega sombreado */
+}
+
+#listaClientesBuscarBtt {
+-fx-font-size: 20px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20px 20px 20px 20;
+	-fx-font-weight: bold; /* Hace que el texto sea bold */
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+}
+
+#vBoxListaClientes {
+		-fx-background-radius: 15px 15px 15px 15px;
+	
+}

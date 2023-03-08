@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="padrePane" prefHeight="900.0" prefWidth="645.0" stylesheets="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/src/main/resources/estiloTablet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.TabletOverviewController">
+	<children>
+
+		<!-- Panel Inferior Azul Con Botones -->
+		<Pane fx:id="barraInferiorPane" layoutX="5.0" layoutY="839.0" prefHeight="61.0" prefWidth="645.0" style="-fx-background-color: #2B4162;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+			<children>
+            <Pane fx:id="inicioBtt" layoutX="90.0" layoutY="8.0" onMouseClicked="#goToInicio" onMousePressed="#goToInicio" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #F1E7CA;" visible="false">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/homeblack.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="trabajoPendienteBtt" layoutX="295.0" layoutY="8.0" onMouseClicked="#goToTrabajoPendiente" onMousePressed="#goToTrabajoPendiente" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #F1E7CA;" visible="false">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/relojnegro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="listaClientesBtt" layoutX="523.0" layoutY="8.0" onMouseClicked="#goToListaClientes" onMousePressed="#goToListaClientes" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #F1E7CA;" visible="false">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/papelnegro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+			</children>
+		</Pane>
+
+      		<!-- Panel Superior Azul Con Botón Log Out y Titulo -->
+		<Pane fx:id="barraSuperiorPane" prefHeight="61.0" prefWidth="645.0" style="-fx-background-color: #2B4162;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label fx:id="textoIndicador" alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="16.0" prefHeight="30.0" prefWidth="389.0" text="INICIO" textAlignment="CENTER" textFill="#f1e7ca" visible="false">
+					<font>
+						<Font name="Marlett" size="24.0" />
+					</font>
+				</Label>
+				<Button fx:id="logOutBtt" layoutX="512.0" layoutY="11.0" mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: #AB755F;" text="LOG OUT" textFill="#f1e7ca" visible="false">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Button>
+            <ImageView cache="true" fitHeight="49.0" fitWidth="104.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/minilogo.png" />
+               </image>
+            </ImageView>
+			</children>
+		</Pane>
+
+
+
+
+		<!-- Panel Login -->
+		<Pane fx:id="loginPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF ;">
+			<children>
+            <ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+               <image>
+                  <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+               </image>
+            </ImageView>
+				<Button fx:id="LogInBtt" layoutX="123.0" layoutY="625.0" mnemonicParsing="false" onAction="#singIn" prefHeight="79.0" prefWidth="400.0" style="-fx-background-color: #F1E7CA;" text="LOG IN" textOverrun="CLIP">
+					<font>
+						<Font name="Segoe UI" size="24.0" />
+					</font>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Button>
+				<Label layoutX="371.0" layoutY="557.0" onMouseClicked="#forgotPassword" onMousePressed="#forgotPassword" prefHeight="30.0" prefWidth="157.0" text="Forgot Password?" underline="true">
+					<font>
+						<Font size="19.0" />
+					</font>
+				</Label>
+				<Pane fx:id="panePass" layoutX="118.0" layoutY="462.0" prefHeight="79.0" prefWidth="410.0" style="-fx-background-color: #ffffff;">
+					<children>
+						<PasswordField fx:id="tflPassword" layoutX="81.0" layoutY="2.0" prefHeight="75.0" prefWidth="327.0" promptText="Password">
+							<font>
+								<Font size="19.0" />
+							</font>
+						</PasswordField>
+                  <Pane fx:id="paneCandado" layoutX="4.0" layoutY="4.0" prefHeight="72.0" prefWidth="72.0" style="-fx-background-color: #F1E7CA;">
+                     <children>
+                        <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/lock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+					</children>
+				</Pane>
+				<Pane fx:id="paneUsuario" layoutX="118.0" layoutY="350.0" prefHeight="79.0" prefWidth="410.0" style="-fx-background-color: #ffffff;">
+					<children>
+						<TextField fx:id="tflUsername" layoutX="81.0" layoutY="2.0" prefHeight="75.0" prefWidth="327.0" promptText="Username">
+							<font>
+								<Font size="19.0" />
+							</font>
+						</TextField>
+						<Pane fx:id="paneCorreo" layoutX="4.0" layoutY="4.0" prefHeight="72.0" prefWidth="72.0" style="-fx-background-color: #F1E7CA;">
+							<children>
+								<ImageView fitHeight="61.0" fitWidth="61.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/email.png" />
+									</image>
+								</ImageView>
+							</children>
+						</Pane>
+					</children>
+				</Pane>
+				<Group layoutX="-6.0" layoutY="-50.0">
+					<children>
+						<Pane layoutX="150.0" layoutY="129.0" prefHeight="161.0" prefWidth="4.0" style="-fx-background-color: #2B4162;" />
+						<Pane layoutX="151.0" layoutY="286.0" prefHeight="4.0" prefWidth="355.0" style="-fx-background-color: #2B4162;" />
+						<Pane layoutX="151.0" layoutY="129.0" prefHeight="4.0" prefWidth="355.0" style="-fx-background-color: #2B4162;" />
+						<ImageView fitHeight="323.0" fitWidth="328.0" layoutX="167.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/LOGO_AZUL.png" />
+							</image>
+						</ImageView>
+						<Pane layoutX="504.0" layoutY="129.0" prefHeight="161.0" prefWidth="4.0" style="-fx-background-color: #2B4162;" />
+					</children>
+				</Group>
+			</children>
+		</Pane>
+
+		<!-- Panel Inicio Mecanicos Jefes -->
+		<Pane fx:id="inicioDirectorPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
+			<children>
+            <ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+               <image>
+                  <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+               </image>
+            </ImageView>
+				<Label fx:id="labelGoodMorning" layoutX="27.0" layoutY="79.0" prefHeight="30.0" prefWidth="157.0" text="Good Morning" underline="false" AnchorPane.leftAnchor="27.0">
+					<font>
+						<Font size="19.0" />
+					</font>
+				</Label>
+				<Label fx:id="labelHiUsernameJefe" layoutX="25.0" layoutY="30.0" text="Hi Username!" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="30.0">
+					<font>
+						<Font name="Symbol" size="36.0" />
+					</font>
+				</Label>
+				<Pane fx:id="paneContenedorInicio" layoutX="25.0" layoutY="129.0" prefHeight="636.0" prefWidth="595.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="129.0">
+					<children>
+						<Button fx:id="fichasClientesDireBtt" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#showListaFichaClientesPane" prefHeight="265.0" prefWidth="270.0" style="-fx-background-color: #F1E7CA;" text="Fichas Clientes">
+							<font>
+								<Font name="Segoe UI Bold" size="32.0" />
+							</font>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+						</Button>
+						<Button fx:id="trabajoPendienteDireBtt" alignment="CENTER" layoutX="311.0" layoutY="30.0" mnemonicParsing="false" onAction="#showTrabajoPendientePane" prefHeight="265.0" prefWidth="270.0" style="-fx-background-color: #F1E7CA;" text="Trabajo Pendiente" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+							<font>
+								<Font name="Segoe UI Bold" size="32.0" />
+							</font>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+						</Button>
+						<Button fx:id="registrarVehiculoDireBtt" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#showRegistroVehiculosPane" prefHeight="270.0" prefWidth="568.0" style="-fx-background-color: #F1E7CA;" text="Registrar Vehiculo">
+							<font>
+								<Font name="Segoe UI Bold" size="32.0" />
+							</font>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+						</Button>
+					</children>
+				</Pane>
+
+			</children>
+		</Pane>
+
+		<!-- Panel Inicio Mecanicos Normales -->
+		<Pane fx:id="inicioEmpleadoPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
+			<children>
+				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+					<image>
+						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+					</image>
+				</ImageView>
+				<Label layoutX="27.0" layoutY="79.0" prefHeight="30.0" prefWidth="157.0" text="Good Morning" underline="false" AnchorPane.leftAnchor="27.0">
+					<font>
+						<Font size="19.0" />
+					</font>
+				</Label>
+				<Label fx:id="labelHiUsernameEmpleado" layoutX="25.0" layoutY="30.0" text="Hi Username!" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="30.0">
+					<font>
+						<Font name="Symbol" size="36.0" />
+					</font>
+				</Label>
+				<Pane fx:id="paneContieneInicio2" layoutX="25.0" layoutY="129.0" prefHeight="636.0" prefWidth="595.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="109.0">
+					<children>
+						<Button fx:id="fichasClientesEmpBtt" layoutX="19.0" layoutY="32.0" mnemonicParsing="false" onAction="#showListaFichaClientesPane" prefHeight="265.0" prefWidth="558.0" style="-fx-background-color: #F1E7CA;" text="Fichas Clientes">
+							<font>
+								<Font name="Segoe UI Bold" size="32.0" />
+							</font>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+						</Button>
+						<Button fx:id="TrabajoPendienteEmpBtt" layoutX="19.0" layoutY="330.0" mnemonicParsing="false" onAction="#showTrabajoPendientePane" prefHeight="265.0" prefWidth="558.0" style="-fx-background-color: #F1E7CA;" text="Trabajo Pendiente">
+							<font>
+								<Font name="Segoe UI Bold" size="32.0" />
+							</font>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+						</Button>
+					</children>
+				</Pane>
+			</children>
+
+		</Pane>
+
+		<!-- Panel Registro Vehiculos -->
+		<Pane fx:id="registroVehiculosPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
+			<children>
+				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+					<image>
+						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+					</image>
+				</ImageView>
+      				<Label layoutX="35.0" layoutY="55.0" text="MATRICULA DE VEHICULO">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="registroVehiculoMatricula" layoutX="35.0" layoutY="80.0" prefHeight="55.0" prefWidth="270.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="42.0" />
+      <TextField fx:id="registroVehiculoTiempo" layoutX="35.0" layoutY="190.0" prefHeight="55.0" prefWidth="270.0" AnchorPane.leftAnchor="35.0" />
+      <Label layoutX="35.0" layoutY="165.0" text="TIEMPO (DÍAS)">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="registroVehiculoPresupuestoTaller" layoutX="335.0" layoutY="190.0" prefHeight="55.0" prefWidth="270.0" AnchorPane.rightAnchor="43.0" />
+      <Label layoutX="335.0" layoutY="165.0" text="PRESUPUESTO TALLER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="275.0" text="MECANICO ASIGNADO">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="385.0" text="DIAGNÓSTICO">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="registroVehiculoBotonAnadir" layoutX="147.0" layoutY="680.0" mnemonicParsing="false" onAction="#addReparacion" prefHeight="60.0" prefWidth="350.0" style="-fx-background-color: #F1E7CA;" text="REGISTRAR">
+         <font>
+            <Font name="Segoe UI Bold" size="21.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+            <Label layoutX="335.0" layoutY="275.0" text="CLIENTE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="registroVehiculoDiagnostico" alignment="TOP_LEFT" layoutX="35.0" layoutY="410.0" prefHeight="230.0" prefWidth="570.0" />
+            <ChoiceBox fx:id="registroVehiculoChoiceBoxMecanico" layoutX="35.0" layoutY="300.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: #FFFFFF;" />
+            <ChoiceBox fx:id="registroVehiculoChoiceBoxCliente" layoutX="335.0" layoutY="300.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: #FFFFFF;" />
+            <TextField fx:id="registroVehiculoPresupuestoCliente" layoutX="335.0" layoutY="80.0" prefHeight="55.0" prefWidth="270.0" />
+            <Label layoutX="335.0" layoutY="55.0" text="PRESUPUESTO CLIENTE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+			</children>
+		</Pane>
+
+      		<!-- Panel Trabajo Pendientes -->
+		<Pane fx:id="trabajoPendientePane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
+			<children>
+      				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+      					<image>
+      						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+      					</image>
+      				</ImageView>
+            <Button fx:id="fichaTrabajoPAnteriorBtt" layoutX="195.0" layoutY="705.0" mnemonicParsing="false" onAction="#anteriorTrabajoPendiente" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="&lt;">
+               <font>
+                  <Font name="Segoe UI Bold" size="28.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="fichaTrabajoPSiguienteBtt" layoutX="385.0" layoutY="705.0" mnemonicParsing="false" onAction="#siguienteTrabajoPendiente" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="&gt;">
+               <font>
+                  <Font name="Segoe UI Bold" size="28.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Label fx:id="labelPaginaReparaciones" alignment="CENTER" layoutX="261.0" layoutY="717.0" prefHeight="36.0" prefWidth="119.0" text="0 - 0">
+               <font>
+                  <Font name="Lucida Console" size="24.0" />
+               </font>
+            </Label>
+      <Button fx:id="fichaTrabajoPTerminarBtt" layoutX="335.0" layoutY="634.0" mnemonicParsing="false" onAction="#fichaTrabajoPTerminarTrabajo" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #AB755F;" text="TERMINAR" textFill="#f1e7ca">
+         <font>
+            <Font name="Segoe UI" size="28.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+            <Label layoutX="35.0" layoutY="55.0" text="MATRICULA DE VEHICULO">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fichaTrabajoPMatricula" alignment="CENTER" editable="false" layoutX="35.0" layoutY="80.0" prefHeight="55.0" prefWidth="470.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <TextField fx:id="fichaTrabajoPTiempo" editable="false" layoutX="35.0" layoutY="190.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label layoutX="35.0" layoutY="165.0" text="TIEMPO (DÍAS)">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fichaTrabajoPPresupuestoTaller" editable="false" layoutX="335.0" layoutY="190.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label layoutX="335.0" layoutY="165.0" text="PRESUPUESTO TALLER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="268.0" text="MECANICO ASIGNADO">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="372.0" text="DIAGNÓSTICO">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fichaTrabajoPDiagnostico" alignment="TOP_LEFT" editable="false" layoutX="38.0" layoutY="397.0" prefHeight="124.0" prefWidth="570.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField fx:id="fichaTrabajoPMecanico" editable="false" layoutX="36.0" layoutY="293.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label layoutX="532.0" layoutY="55.0" text="CLIENTE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="fichaTrabajoPIniciarBtt" layoutX="35.0" layoutY="634.0" mnemonicParsing="false" onAction="#fichaTrabajoPIniciarTrabajo" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #AB755F;" text="INICIAR" textFill="#f1e7ca">
+               <font>
+                  <Font name="Segoe UI" size="28.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <TextField fx:id="fichaTrabajoPPresupuestoCliente" editable="false" layoutX="336.0" layoutY="293.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label layoutX="336.0" layoutY="268.0" text="PRESUPUESTO CLIENTE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Pane fx:id="fichaTrabajoPClienteIdBtt" layoutX="533.0" layoutY="80.0" onMouseClicked="#showClienteByTrabajoPendiente" onMousePressed="#showClienteByTrabajoPendiente" prefHeight="55.0" prefWidth="60.0" style="-fx-background-color: fffaee;">
+               <children>
+                  <Text fx:id="fichaTrabajoPClienteId" layoutX="-1.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="62.281239330768585">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Text>
+               </children>
+            </Pane>
+            <Label layoutX="38.0" layoutY="541.0" text="FECHA INICIO">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fichaTrabajoPFechaInicio" alignment="CENTER" editable="false" layoutX="38.0" layoutY="566.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="fichaTrabajoPFechaFin" alignment="CENTER" editable="false" layoutX="338.0" layoutY="566.0" prefHeight="55.0" prefWidth="270.0" style="-fx-background-color: fffaee;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label layoutX="338.0" layoutY="541.0" text="FECHA FIN">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+			</children>
+			</Pane>
+
+		<!-- Panel Lista Clientes -->
+		<Pane fx:id="listaClientesPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;">
+			<children>
+				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+					<image>
+						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+					</image>
+				</ImageView>
+            <TextField fx:id="listaClientesBuscar" layoutX="35.0" layoutY="55.0" prefHeight="55.0" prefWidth="389.0" promptText="Buscar...">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="listaClientesBuscarBtt" layoutX="441.0" layoutY="55.0" mnemonicParsing="false" onAction="#listaClientesBuscar" prefHeight="55.0" prefWidth="176.0" style="-fx-background-color: #f1e7ca;" text="BUSCAR">
+               <font>
+                  <Font name="Malgun Gothic" size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <ScrollPane layoutX="35.0" layoutY="140.0" prefHeight="610.0" prefWidth="575.0" style="fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="vBoxListaClientes" prefHeight="600.0" prefWidth="555.0" spacing="15.0" style="fx-background-color: transparent;">
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding></VBox>
+               </content>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </ScrollPane>
+				</children>
+				</Pane>
+
+		<!-- Panel Ficha Cliente -->
+		<Pane fx:id="fichaClientesPane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
+			<children>
+				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
+					<image>
+						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
+					</image>
+				</ImageView>
+            <Pane layoutX="25.0" layoutY="46.0" prefHeight="694.0" prefWidth="595.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="labelNombreApellidos" alignment="CENTER" layoutX="80.0" layoutY="237.0" prefHeight="143.0" prefWidth="426.0" text="Ana María González" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Tahoma Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="42.0" layoutY="361.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="20.0" text="DNI:">
+                           <font>
+                              <Font name="Corbel" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelDNI" layoutX="52.0" layoutY="16.0" text=" 12345678A" textFill="#5e5e5e">
+                           <font>
+                              <Font name="Cascadia Mono Regular" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="42.0" layoutY="470.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="20.0" text="DIRECCIÓN:">
+                           <font>
+                              <Font name="Corbel" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelDireccion" layoutX="131.0" layoutY="16.0" prefHeight="30.0" prefWidth="358.0" text=" Calle Pablo Picasso 23, Málaga" textFill="#5e5e5e" textOverrun="CLIP">
+                           <font>
+                              <Font name="Cascadia Mono Regular" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="42.0" layoutY="579.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="20.0" text="TELÉFONO:">
+                           <font>
+                              <Font name="Corbel" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelTelefono" layoutX="129.0" layoutY="16.0" prefHeight="30.0" prefWidth="358.0" text=" 600892154" textFill="#5e5e5e" textOverrun="CLIP">
+                           <font>
+                              <Font name="Cascadia Mono Regular" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="imagenFicha" fitHeight="230.0" fitWidth="228.0" layoutX="189.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/fotocliente.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+				</children>
+				</Pane>
+	</children>
+</AnchorPane>

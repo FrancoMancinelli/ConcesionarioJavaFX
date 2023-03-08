@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">sasha125</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/concesionario?serverTimezone=UTC</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.default_schema">concesionario</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+
+
+		<mapping class="hibernate.persistence.models.Cliente" />		
+		<mapping class="hibernate.persistence.models.Concesionario" />
+		<mapping class="hibernate.persistence.models.Director" />		
+		<mapping class="hibernate.persistence.models.Empleado" />
+		<mapping class="hibernate.persistence.models.Especialidad" />		
+		<mapping class="hibernate.persistence.models.Mecanico" />
+		<mapping class="hibernate.persistence.models.MecanicoEspecialidad" />
+		<mapping class="hibernate.persistence.models.Propuesta" />		
+		<mapping class="hibernate.persistence.models.Reparacion" />
+		<mapping class="hibernate.persistence.models.Vehiculo" />		
+		<mapping class="hibernate.persistence.models.Vendedor" />		
+		
+
+	</session-factory>
+</hibernate-configuration>

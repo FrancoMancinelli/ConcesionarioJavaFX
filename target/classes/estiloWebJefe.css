@@ -1,0 +1,90 @@
+#btnLogin {
+    -fx-font-size: 32px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20px 20px 20px 20;
+	-fx-font-weight: bold; /* Hace que el texto sea bold */
+		-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	
+}
+
+#contenedorLogin, #username, #password, #paneCorreo, #paneCandado, 
+#panePasswordLogin, #paneUsernameLogin, #paneContenedorOpcionesVentas,
+#paneContenedorRegistro {
+	-fx-background-radius: 20px 20px 20px 20;
+}
+
+#paneUsernameLogin, #panePasswordLogin {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 4); /* Agrega sombreado */
+}
+
+#btnVerResumenVentas, #btnVerStock, #btnVerResumenTaller, #btnVerRegistro{
+	-fx-background-radius: 15px 15px 15px 15px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4); /* Agrega sombreado */
+
+}
+
+#btnVerResumenVentas, #btnVerStock, #btnVerResumenTaller, #btnVerRegistro{
+    -fx-font-size: 36px;
+    -fx-font-weight: bold; /* Hace que el texto sea bold */
+}
+
+#registroTxfNombre, #registroTxfApellidos, #registroTxfPassword, #registroTxfDNI,
+#registroTxfTelefono, #registroTxfDireccion {
+	-fx-background-radius: 12px 12px 12px 12;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4); /* Agrega sombreado */
+}
+
+#btnSignup {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold; /* Hace que el texto sea bold */
+	-fx-background-radius: 15px 15px 15px 15px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Agrega sombreado */
+
+}
+
+#buscadorVentas, #filtradorVentas, #buscadorStock, #filtradorStock {
+	-fx-background-radius: 15px 15px 15px 15px;
+}
+
+#btnBuscarVentas, #btnFiltrarVentas, #btnFiltrarStock, #btnBuscarStock {
+	-fx-background-radius: 15px 15px 15px 15px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	
+}
+
+#tituloTotalGananciasAnualVentas, #tituloTotalGananciasMensualVentas, 
+#tituloTotalGananciasSemanalVentas, #tituloTotalGananciasSemanales2, 
+#tituloTotalGananciasMensuales2, #tituloTotalGananciasAnuales2 {
+    -fx-background-radius: 13px 13px 13px 13px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 3, 3); /* Agrega sombreado */
+}
+
+
+#txfGananciasAnual, #txfGananciasMensual, #txfGananciasSemanal,
+#txfGananciasAnual1, #txfGananciasMensual1, #txfGananciasSemanal1 {
+	-fx-background-radius: 25px 25px 25px 25px;
+}
+
+#panelContenedorGridVentas {
+	-fx-background-radius: 35px 35px 35px 35px;
+}
+
+#btnRetroceder {
+	-fx-background-radius: 100px 100px 100px 100px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 3); /* Agrega sombreado */
+}
+
+#btnLogout 	{
+-fx-background-radius: 10px 10px 10px 10px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 3); /* Agrega sombreado */
+}
+
+#cabeceraStock, #cabeceraResumenVentas {
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-pane {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 10;
+}
