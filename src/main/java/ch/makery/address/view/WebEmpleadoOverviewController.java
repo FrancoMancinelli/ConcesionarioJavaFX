@@ -223,7 +223,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * M�todo que realiza la comprobaci�n de datos para iniciar sesi�on
+	 * Método que realiza la comprobación de datos para iniciar sesióon
 	 * 
 	 * @param event
 	 */
@@ -265,7 +265,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que realiza una acción al pulsar en Forgot Password
 	 * @param event
 	 */
 	@FXML
@@ -273,6 +273,10 @@ public class WebEmpleadoOverviewController {
 		errorConcesionario(event);
 	}
 
+	/**
+	 * Método que realiza el deslogueo volviendo al Login
+	 * @param event
+	 */
 	@FXML
 	void logOut(ActionEvent event) {
 		tituloSuperior.setText("LOGIN");
@@ -297,7 +301,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que visualiza la vista del listado de clientes
 	 * @param event
 	 */
 	@FXML
@@ -317,7 +321,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que visualiza la vista del listado de clientes
 	 * @param event
 	 */
 	@FXML
@@ -337,7 +341,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que devuelve un error de concesionario
 	 * @param event
 	 */
 	@FXML
@@ -346,7 +350,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que visualiza la lista de propuestas
 	 * @param event
 	 */
 	@FXML
@@ -361,6 +365,10 @@ public class WebEmpleadoOverviewController {
 
 	}
 
+	/**
+	 * Método que lista los datos con las fichas de los clientes buscados
+	 * @param event
+	 */
 	@FXML
 	void listaClientesBuscar(ActionEvent event) {
 		String busqueda = listaClientesBuscadorClientes.getText();
@@ -385,7 +393,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que ordena los clientes según nombre o apellido
 	 * @param event
 	 */
 	@FXML
@@ -416,7 +424,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que visualiza el panel de registro de clientes
 	 * @param event
 	 */
 	@FXML
@@ -426,7 +434,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que registra un nuevo cliente comprobando ciertos campos cumplan los requisitos
 	 * @param event
 	 */
 	@FXML
@@ -451,14 +459,14 @@ public class WebEmpleadoOverviewController {
 					alert.showAndWait();
 				}
 
-				// Tel�fono Invalido
+				// Teléfono Invalido
 			} else {
 				alert.setHeaderText("Error");
 				alert.setContentText("Tel�fono Invalido");
 				alert.showAndWait();
 			}
 
-			// Alg�n campo esta vacio...
+			// Algún campo esta vacio...
 		} else {
 			alert.setHeaderText("Error");
 			alert.setContentText("Rellene todos los campos");
@@ -467,6 +475,10 @@ public class WebEmpleadoOverviewController {
 
 	}
 
+	/**
+	 * Método que enlista las propuestas según el filtro de busqueda
+	 * @param event
+	 */
 	@FXML
 	void listaPropuestasBuscar(ActionEvent event) {
 		String busqueda = listaPropuestasBuscadorPropuestas.getText();
@@ -493,43 +505,17 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que enlista las propuestas según el filtro de ordenación
 	 * @param event
 	 */
 	@FXML
 	void listaPropuestasOrdenar(ActionEvent event) {
 
 		contactar();
-
-//		if (listaPropuestasChoiceBFiltradorPropuesta.getValue().equals("-")) {
-//			return;
-//		}
-//		
-//		List<Propuesta> aux = new ArrayList<>(listaPropuestas);
-//		List<String[]> listaDatos = new ArrayList<>();
-//
-//		Comparator<Propuesta> comparador = null;
-//
-//		switch (listaClientesChoiceBFiltradorClientes.getValue()) {
-//		case "Nombre":
-//			comparador = Comparator.comparing(Propuesta::(getId().getFecha()));
-//			break;
-//		case "Apellido":
-//			comparador = Comparator.comparing(p -> p.getApellido());
-//			break;
-//		default:
-//			return;
-//		}
-//
-//		List<String[]> listaDatos = listaPropuestas.stream().sorted(comparador)
-//				.map(p -> new String[] {  })
-//				.collect(Collectors.toList());
-//
-//		listaClientesRellenarGrid(listaDatos);
 	}
 
 	/**
-	 * 
+	 * Método que visualiza el registro de Propuestas
 	 * @param event
 	 */
 	@FXML
@@ -639,16 +625,16 @@ public class WebEmpleadoOverviewController {
 	private boolean dniValido() {
 		String dni = registroTxfDNI.getText();
 		if (dni.length() == 9 && Character.isLetter(dni.charAt(dni.length() - 1))) {
-			// Comprueba si los primeros 8 caracteres son todos d�gitos.
+			// Comprueba si los primeros 8 caracteres son todos dígitos.
 			for (int i = 0; i < 9; i++) {
 				if (!Character.isDigit(dni.charAt(i))) {
 				}
 			}
-			// Si los primeros 9 caracteres son todos d�gitos y el �ltimo es una letra,
+			// Si los primeros 9 caracteres son todos dígitos y el �ltimo es una letra,
 			// devuelve verdadero.
 			return true;
 		}
-		// Si la longitud del String no es igual a 9 o el �ltimo car�cter no es una
+		// Si la longitud del String no es igual a 9 o el último caracter no es una
 		// letra, devuelve falso.
 		return false;
 	}
@@ -664,6 +650,9 @@ public class WebEmpleadoOverviewController {
 
 	}
 
+	/**
+	 * Método que da un error de alert por falta de acceso
+	 */
 	private void contactar() {
 		alert.setHeaderText("NO ACCESS");
 		alert.setContentText("No tienes acceso suficiente para ingresar aquí");
@@ -674,6 +663,9 @@ public class WebEmpleadoOverviewController {
 
 	}
 
+	/**
+	 * Método que limpia el registro de clientes
+	 */
 	private void limpiarRegistroCliente() {
 		registroTxfNombre.clear();
 		registroTxfCorreo.clear();
@@ -683,6 +675,9 @@ public class WebEmpleadoOverviewController {
 		registroTxfApellidos.clear();
 	}
 
+	/**
+	 * Método que limpia el login
+	 */
 	void limpiarLogin() {
 		tflUsername.clear();
 		tflPassword.clear();

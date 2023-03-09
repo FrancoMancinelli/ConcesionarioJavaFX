@@ -276,6 +276,10 @@ public class WebJefeOverviewController {
 		}
 	}
 
+	/**
+	 * Método que realiza el cambio de vistas al desloguear
+	 * @param event
+	 */
 	@FXML
 	void logOut(ActionEvent event) {
 		registroPane.setVisible(false);
@@ -301,6 +305,10 @@ public class WebJefeOverviewController {
 		registroTxfDireccion.clear();
 	}
 
+	/**
+	 * Método que muestra el panel de resumen de ventas y rellena el grid con los datos correspondientes.
+	 * @param event
+	 */
 	@FXML
 	void verResumenVentasPane(ActionEvent event) {
 		inicioPane.setVisible(false);
@@ -345,6 +353,10 @@ public class WebJefeOverviewController {
 
 	}
 
+	/**
+	 * Método que imprime en el gridPane las ventas según el filtro de busqueda
+	 * @param event
+	 */
 	@FXML
 	void verResumenVentasPaneBuscados(ActionEvent event) {
 		if (!buscadorVentas.getText().isEmpty()) {
@@ -369,6 +381,10 @@ public class WebJefeOverviewController {
 		}
 	}
 
+	/**
+	 * Método que imprime en el gridPane las ventas según el filtro de ordenación
+	 * @param event
+	 */
 	@FXML
 	void verResumenVentasPaneFiltrados(ActionEvent event) {
 		if (filtradorVentas.getValue().equals("-")) {
@@ -402,6 +418,10 @@ public class WebJefeOverviewController {
 		rellenarGridResumenVentas(listaDatos);
 	}
 
+	/**
+	 * Método que imprime en el gridPane el stock disponible filtrados por ordenación
+	 * @param event
+	 */
 	@FXML
 	void verStockFiltrados(ActionEvent event) {
 		if (filtradorStock.getValue().equals("-")) {
@@ -446,6 +466,10 @@ public class WebJefeOverviewController {
 		rellenarGridStock(listaDatos);
 	}
 
+	/**
+	 * Método que visualiza el panel del stock y rellena el gridPane con todo el stock
+	 * @param event
+	 */
 	@FXML
 	void verStockPane(ActionEvent event) {
 		inicioPane.setVisible(false);
@@ -470,6 +494,10 @@ public class WebJefeOverviewController {
 
 	}
 
+	/**
+	 * Método que imprime en el gridPane el stock según el filtro de busqueda
+	 * @param event
+	 */
 	@FXML
 	void verStockBuscados(ActionEvent event) {
 		if (!buscadorStock.getText().isEmpty()) {
@@ -492,6 +520,10 @@ public class WebJefeOverviewController {
 		}
 	}
 
+	/**
+	 * Muestra el panel del resumen del taller y rellena datos informativos de la vista
+	 * @param event
+	 */
 	@FXML
 	void verResumenTallerPane(ActionEvent event) {
 		inicioPane.setVisible(false);
@@ -533,6 +565,10 @@ public class WebJefeOverviewController {
 
 	}
 
+	/**
+	 * Método que visualiza la vista de Registro
+	 * @param event
+	 */
 	@FXML
 	void verRegistroPane(ActionEvent event) {
 		inicioPane.setVisible(false);
@@ -541,6 +577,10 @@ public class WebJefeOverviewController {
 		tituloSuperior.setText("REGISTRO");
 	}
 
+	/**
+	 * Método que visualiza la vista del Inicio
+	 * @param event
+	 */
 	@FXML
 	void inicio(ActionEvent event) {
 		registroPane.setVisible(false);
@@ -553,6 +593,10 @@ public class WebJefeOverviewController {
 		btnLogout.setVisible(true);
 	}
 
+	/**
+	 * Método que registra un nuevo empleado comprobando que se cumplan ciertas condiciones en los campos de texto
+	 * @param event
+	 */
 	@FXML
 	void registrarNuevoEmpleado(ActionEvent event) {
 		if (!formularioRegistroVacio()) {
@@ -603,6 +647,10 @@ public class WebJefeOverviewController {
 
 	}
 
+	/**
+	 * Método que comprueba si todos los campos de un formulario de registro estan vacios o no
+	 * @return
+	 */
 	private boolean formularioRegistroVacio() {
 		if (registroTxfNombre.getText().isEmpty() || registroTxfApellidos.getText().isEmpty()
 				|| registroTxfPassword.getText().isEmpty() || registroTxfDNI.getText().isEmpty()
@@ -612,6 +660,10 @@ public class WebJefeOverviewController {
 		return false;
 	}
 
+	/**
+	 * Método que comprueba si un telefono es correcto
+	 * @return
+	 */
 	private boolean telefonoValido() {
 		String telefono = registroTxfTelefono.getText();
 		if (telefono.length() != 9) {
@@ -625,6 +677,10 @@ public class WebJefeOverviewController {
 		return true;
 	}
 
+	/**
+	 * Método que comprueba si el DNI es correcto
+	 * @return
+	 */
 	private boolean dniValido() {
 		String dni = registroTxfDNI.getText();
 		if (dni.length() == 9 && Character.isLetter(dni.charAt(dni.length() - 1))) {
@@ -642,6 +698,10 @@ public class WebJefeOverviewController {
 		return false;
 	}
 
+	/**
+	 * Método que rellena el gridPane del resumen de Ventas
+	 * @param datos
+	 */
 	void rellenarGridResumenVentas(List<String[]> datos) {
 
 		gridResumenVentasData.getChildren().clear();
@@ -662,6 +722,10 @@ public class WebJefeOverviewController {
 		}
 	}
 
+	/**
+	 * Método que rellena el gridPane del resumen del Stock
+	 * @param datos
+	 */
 	void rellenarGridStock(List<String[]> datos) {
 
 		gridStockData.getChildren().clear();
