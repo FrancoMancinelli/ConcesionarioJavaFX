@@ -1,0 +1,49 @@
+#paneContenedorLogin, #paneCorreo, #paneCandado, #paneContenedorCorreo, #paneContenedorPassword,
+#tflUsername, #tflPassword, #paneContenedorConcesionarios,
+#paneContenedorRegistroPropuesta, #paneGrid, #paneContenedorRegistroClientes {
+		-fx-background-radius: 20px 20px 20px 20;
+}
+
+#listaClientesChoiceBFiltradorClientes, #listaClientesBuscadorClientes,
+#listaPropuestasChoiceBFiltradorPropuesta, #listaPropuestasBuscadorPropuestas {
+			-fx-background-radius: 10px 10px 10px 10;
+	
+}
+
+#btnLogin {
+    -fx-font-size: 32px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20px 20px 20px 20;
+	-fx-font-weight: bold; /* Hace que el texto sea bold */
+		-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	
+}
+
+#concesionarioBarcelona, #concesionarioMalaga, #concesionarioMarbella,
+#concesionarioJerez {
+			-fx-background-radius: 20px 20px 20px 20;
+			-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	
+}
+
+#registroTxfNombre, #registroTxfApellidos, #registroTxfCorreo,
+#registroTxfDNI, #registroTxfTelefono, #registroTxfDireccion,
+#registroPrpuestasChoiceBox, #formularioPropuestaModelo, #formularioPropuestaColor,
+#formularioPropuestaFecha, #formularioPropuestaPrecio, #formularioPropuestaDetalles,
+#listaClientesOrdenarBtt, #listaClientesBuscarBtt, #listaClientesAnadirBtt,
+#listaPropuestasAnadirBtt, #listaPropuestasBuscarBtt, #listaClientesAnadirBtt1 {
+	-fx-background-radius: 12px 12px 12px 12;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4); /* Agrega sombreado */
+}
+
+#btnRegistrar, #formularioPropuestaAnadirBtt {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold; /* Hace que el texto sea bold */
+	-fx-background-radius: 15px 15px 15px 15px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Agrega sombreado */
+
+}
+
+#btnLogout, #listaClientesClientesBtt, #listaClientesPropuestasBtt 	{
+-fx-background-radius: 10px 10px 10px 10px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 3); /* Agrega sombreado */
+}

@@ -10,24 +10,19 @@ import org.hibernate.Session;
 
 import ch.makery.address.TabletMecanicoApp;
 import hibernate.persistence.dao.ClienteDao;
-import hibernate.persistence.dao.ConcesionarioDao;
 import hibernate.persistence.dao.EmpleadoDao;
 import hibernate.persistence.dao.PropuestaDao;
-import hibernate.persistence.dao.ReparacionDao;
-import hibernate.persistence.dao.VehiculoDao;
 import hibernate.persistence.dao.VendedorDao;
 import hibernate.persistence.models.Cliente;
-import hibernate.persistence.models.Concesionario;
 import hibernate.persistence.models.Empleado;
-import hibernate.persistence.models.Mecanico;
 import hibernate.persistence.models.Propuesta;
 import hibernate.persistence.models.PropuestaId;
-import hibernate.persistence.models.Reparacion;
 import hibernate.persistence.models.Vehiculo;
 import hibernate.persistence.models.Vendedor;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -195,6 +190,9 @@ public class WebEmpleadoOverviewController {
 	@FXML
 	private Button formularioPropuestaAnadirBtt;
 
+	// Componentes CSS
+	private Pane paneGrid, paneContenedorLogin, paneCorreo, paneCandado, paneContenedorCorreo, paneContenedorPassword, paneContenedorRegistroPropuesta;
+	
 	// Reference to the main application.
 	private TabletMecanicoApp WebEmpleadoApp;
 
@@ -216,8 +214,10 @@ public class WebEmpleadoOverviewController {
 
 		for (int i = 0; i < cabeceraInfo.length; i++) {
 			Label label = new Label(cabeceraInfo[i]);
-			label.setFont(Font.font("System", FontWeight.BOLD, FontPosture.REGULAR, 12)); // Fuente en negrita
+			label.setFont(Font.font("System", FontWeight.BOLD, FontPosture.REGULAR, 16)); // Fuente en negrita
 			listaClientesCabecera.add(label, i, 0);
+			listaClientesCabecera.setHalignment(label, HPos.CENTER);
+
 		}
 
 	}
@@ -572,20 +572,25 @@ public class WebEmpleadoOverviewController {
 	 * @param datos
 	 */
 	void listaClientesRellenarGrid(List<String[]> datos) {
-		listaClientesGrid.getChildren().clear();
-		// Recorre los elementos de la lista y agrega nodos a la grid.
-		int row = 0;
-		for (String[] fila : datos) {
-			for (int col = 0; col < 5; col++) {
-				Label label = new Label(fila[col]);
-				listaClientesGrid.add(label, col, row);
-			}
-			row++;
-			if (row > 15) {
-				break;
-			}
-		}
+	    listaClientesGrid.getChildren().clear();
+	    // Recorre los elementos de la lista y agrega nodos a la grid.
+	    int row = 0;
+	    for (String[] fila : datos) {
+	        for (int col = 0; col < 5; col++) {
+	            Label label = new Label(fila[col]);
+	            label.setFont(new Font(14));
+			    label.setAlignment(Pos.CENTER); // Alinea el texto en el centro de la casilla
+			    label.setMaxWidth(Double.MAX_VALUE); // La Label ocupa todo el espacio posible en la casilla
+				
+	            listaClientesGrid.add(label, col, row);
+	        }
+	        row++;
+	        if (row > 15) {
+	            break;
+	        }
+	    }
 	}
+
 
 	/**
 	 * 
