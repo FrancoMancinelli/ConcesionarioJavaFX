@@ -45,17 +45,6 @@ public class Cliente extends AbstractEntity implements Serializable {
 		this.nombre = nombre;
 		this.telefono = telefono;
 	}
-    
-    public Cliente(String dni, String correo, String nombre, String apellido, String direccion,
-            Integer telefono) {
-        super();
-        this.dni = dni;
-        this.correo = correo;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-        this.telefono = telefono;
-    }
 
 
 	public Cliente(String dni, Concesionario concesionario, String nombre, String apellido, String direccion,
@@ -68,6 +57,26 @@ public class Cliente extends AbstractEntity implements Serializable {
 		this.direccion = direccion;
 		this.telefono = telefono;
 	}
+	
+	public Cliente(String dni, String correo, String nombre, String apellido, String direccion,
+			Integer telefono) {
+		super();
+		this.dni = dni;
+		this.correo = correo;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+	}
+	
+
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
 
 	public Integer getId() {
 		return id;
@@ -79,14 +88,6 @@ public class Cliente extends AbstractEntity implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	
-	public String getCorreo() {
-		return correo;
-	}
-
-	public void setCorreo(String correo) {
-		this.correo = correo;
 	}
 
 	public void setConcesionario(Concesionario concesionario) {

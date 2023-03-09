@@ -34,23 +34,30 @@ public class Propuesta extends AbstractEntity implements Serializable {
 	private Boolean vendido = false;
 
 	@Column(name = "detalles")
-    private String detalles;
+	private String detalles;
 
-	public String getDetalles() {
-		return detalles;
-	}
-
-
-	public void setDetalles(String detalles) {
+	public Propuesta(Vendedor vendedor, Cliente cliente, Vehiculo vehiculo, Double precio, String detalles) {
+		super();
+		this.vendedor = vendedor;
+		this.cliente = cliente;
+		this.vehiculo = vehiculo;
+		this.precio = precio;
+		this.vendido = false;
 		this.detalles = detalles;
 	}
-
 
 	public Propuesta() {
 		super();
 	}
 
-	
+	public String getDetalles() {
+		return detalles;
+	}
+
+	public void setDetalles(String detalles) {
+		this.detalles = detalles;
+	}
+
 	public PropuestaId getId() {
 		return id;
 	}
@@ -98,7 +105,5 @@ public class Propuesta extends AbstractEntity implements Serializable {
 	public void setVendido(Boolean vendido) {
 		this.vendido = vendido;
 	}
-	
-
 
 }

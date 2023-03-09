@@ -234,7 +234,7 @@ public class WebJefeOverviewController {
 	}
 
 	/**
-	 * M�todo que realiza la comprobaci�n de datos para iniciar sesi�on
+	 * Metodo que realiza la comprobacion de datos para iniciar sesion
 	 * 
 	 * @param event
 	 */
@@ -263,7 +263,7 @@ public class WebJefeOverviewController {
 			} else {
 				Alert alert = new Alert(AlertType.WARNING);
 				alert.setTitle("Error");
-				alert.setHeaderText("Usuario o contrase�a incorrectos\nIntentelo de nuevo...");
+				alert.setHeaderText("Usuario o password incorrectos\nIntentelo de nuevo...");
 				alert.showAndWait();
 			}
 
@@ -378,16 +378,16 @@ public class WebJefeOverviewController {
 		Comparator<Propuesta> comparador = null;
 
 		switch (filtradorVentas.getValue()) {
-		case "M�s antigua":
+		case "Mas antigua":
 			comparador = Comparator.comparing(p -> p.getId().getFecha());
 			break;
-		case "M�s reciente":
+		case "Mas reciente":
 			comparador = Comparator.comparing(p -> p.getId().getFecha(), Comparator.reverseOrder());
 			break;
-		case "M�s costoso":
+		case "Mas costoso":
 			comparador = Comparator.comparing(Propuesta::getPrecio, Comparator.reverseOrder());
 			break;
-		case "M�s barato":
+		case "Mas barato":
 			comparador = Comparator.comparing(Propuesta::getPrecio);
 			break;
 		default:
@@ -414,10 +414,10 @@ public class WebJefeOverviewController {
 		Comparator<Vehiculo> comparador = null;
 
 		switch (filtradorStock.getValue()) {
-		case "M�s barato":
+		case "Mas barato":
 			comparador = Comparator.comparing(Vehiculo::getPrecio);
 			break;
-		case "M�s costoso":
+		case "Mas costoso":
 			comparador = Comparator.comparing(Vehiculo::getPrecio, Comparator.reverseOrder());
 			break;
 		case "Solo Motos":
@@ -559,14 +559,14 @@ public class WebJefeOverviewController {
 			if (telefonoValido()) {
 				if (dniValido()) {
 					Concesionario conce = concesionarioDao.buscarPorId(1);
-					// Registra empleado, informa del �xito, limpia fields
+					// Registra empleado, informa del exito, limpia fields
 					empleadoDao.registrarEmpleado(registroTxfNombre.getText(), registroTxfApellidos.getText(),
 							registroTxfPassword.getText(), registroTxfDNI.getText(),
 							Integer.parseInt(registroTxfTelefono.getText()), registroTxfDireccion.getText(), conce);
 
 					Alert alert = new Alert(AlertType.WARNING);
 					alert.setTitle("Succes");
-					alert.setHeaderText("Empleado registrado con �xito\nUsername asignado: "
+					alert.setHeaderText("Empleado registrado con exito\nUsername asignado: "
 							+ registroTxfNombre.getText() + registroTxfApellidos.getText().substring(0, 1));
 					alert.showAndWait();
 
@@ -585,15 +585,15 @@ public class WebJefeOverviewController {
 					alert.showAndWait();
 				}
 
-				// Tel�fono Invalido
+				// Telefono Invalido
 			} else {
 				Alert alert = new Alert(AlertType.WARNING);
 				alert.setTitle("Error");
-				alert.setHeaderText("Tel�fono Invalido");
+				alert.setHeaderText("Telefono Invalido");
 				alert.showAndWait();
 			}
 
-			// Alg�n campo esta vacio...
+			// Algun campo esta vacio...
 		} else {
 			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Error");
@@ -628,16 +628,16 @@ public class WebJefeOverviewController {
 	private boolean dniValido() {
 		String dni = registroTxfDNI.getText();
 		if (dni.length() == 9 && Character.isLetter(dni.charAt(dni.length() - 1))) {
-			// Comprueba si los primeros 8 caracteres son todos d�gitos.
+			// Comprueba si los primeros 8 caracteres son todos digitos.
 			for (int i = 0; i < 9; i++) {
 				if (!Character.isDigit(dni.charAt(i))) {
 				}
 			}
-			// Si los primeros 9 caracteres son todos d�gitos y el �ltimo es una letra,
+			// Si los primeros 9 caracteres son todos digitos y el ultimo es una letra,
 			// devuelve verdadero.
 			return true;
 		}
-		// Si la longitud del String no es igual a 9 o el �ltimo car�cter no es una
+		// Si la longitud del String no es igual a 9 o el iltimo caracter no es una
 		// letra, devuelve falso.
 		return false;
 	}

@@ -30,7 +30,7 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Empleado> listarTodos() {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -40,7 +40,7 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Empleado> buscarPorNombre(String nombre) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -52,7 +52,7 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 
 	@Override
 	public Empleado buscarPorDni(String dni) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -62,17 +62,17 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 
 	@Override
 	public Empleado buscarPorId(int id) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
 
-		return (Empleado) session.createQuery("FROM Empleado WHERE dni ='" + id + "'");
+		return (Empleado) session.createQuery("FROM Empleado WHERE id ='" + id + "'");
 	}
 
 	@Override
 	public Empleado buscarPorUserAndPass(String username, String password) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -87,7 +87,7 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 
 	@Override
 	public boolean esDirector(int id) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -103,23 +103,37 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 		}
 
 	}
+	
+	public boolean esVendedor(int id) {
+		// Verificaciï¿½n de sesiï¿½n abierta
+		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
+			session.getTransaction().begin();
+		}
 
-	/**
-	 * 
-	 * EL COMMONDAO TIENE EL INSERT HECHO YA (CAMBIAR)
-	 * 
-	 */
+		Director director = null;
+
+		director = (Director) session.createQuery("FROM Vendedor WHERE id = '" + id + "'").uniqueResult();
+
+		if (director != null && director.getId() == id) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+
 	@Override
 	public void registrarEmpleado(String nombre, String apellidos, String password, String dni, int telefono,
 			String direccion, Concesionario concesionario) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
 
 		String username = nombre + apellidos.charAt(0);
 
-		// Insercción.
+		// Insercciï¿½n.
 		session.save(new Empleado(dni, concesionario, nombre, apellidos, direccion, telefono, username, password));
 		session.flush();
 

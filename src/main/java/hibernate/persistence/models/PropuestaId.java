@@ -12,7 +12,9 @@ import java.util.Objects;
 @Embeddable
 public class PropuestaId extends AbstractEntity implements Serializable {
 	
-    private static final long serialVersionUID = -6236438910310596597L;
+
+
+	private static final long serialVersionUID = -6236438910310596597L;
     
     @Column(name = "id_vendedor", nullable = false, length = 10)
     private int idVendedor;
@@ -26,7 +28,19 @@ public class PropuestaId extends AbstractEntity implements Serializable {
     @Column(name = "fecha", nullable = false)
     private LocalDate fecha;
 
-    public int getDniVendedor() {
+    public PropuestaId(int idVendedor, int idCliente, int idVehiculo) {
+		super();
+		this.idVendedor = idVendedor;
+		this.idCliente = idCliente;
+		this.idVehiculo = idVehiculo;
+		this.fecha = LocalDate.now();
+	}
+    
+    public PropuestaId() {
+		super();
+	}
+
+	public int getDniVendedor() {
         return idVendedor;
     }
 

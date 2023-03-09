@@ -118,7 +118,7 @@ public class TabletOverviewController {
 			empleado = empleadoDao.buscarPorUserAndPass(tflUsername.getText(), tflPassword.getText());
 
 			if (empleado.equals(null)) {
-				alert.setHeaderText("Informaci�n Iconrrecta");
+				alert.setHeaderText("Informacion Iconrrecta");
 				alert.setContentText("Intentelo de nuevo...");
 				alert.showAndWait();
 			} else {
@@ -152,7 +152,7 @@ public class TabletOverviewController {
 			}
 
 		} else {
-			alert.setHeaderText("Informaci�n Insuficiente");
+			alert.setHeaderText("Informacion Insuficiente");
 			alert.setContentText("Rellene todos los datos...");
 			alert.showAndWait();
 		}
@@ -407,7 +407,7 @@ public class TabletOverviewController {
 	@FXML
 	void forgotPassword(MouseEvent event) {
 		alert.setHeaderText("CONTACTE CON SOPORTE");
-		alert.setContentText("N�MERO:      657029888 \n EMAIL: Mancinelly@soporteapp.com");
+		alert.setContentText("NUMERO: 657029888 \nEMAIL: mancinelly@soporteapp.com");
 		alert.showAndWait();
 	}
 

@@ -68,4 +68,6 @@ public interface EmpleadoDaoInterface extends ACommonDaoInterface<Empleado>{
 	 */
 	public List<Empleado> listarTodos();
 
+	boolean esVendedor(int id);
+
 }

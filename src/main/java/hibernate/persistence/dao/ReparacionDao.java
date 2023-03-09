@@ -33,13 +33,14 @@ public class ReparacionDao extends ACommonDao<Reparacion> implements ReparacionD
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
+
 		return (List<Reparacion>) session.createQuery("FROM Reparacion WHERE id_vehiculo='" + id_vehiculo + "'").list();
 
 	}
 
 	@Override
 	public Reparacion buscarPorId(int id) {
-		// Verificaciï¿½n de sesiï¿½n abierta
+		// Verificación de sesión abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}

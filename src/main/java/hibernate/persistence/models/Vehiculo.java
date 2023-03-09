@@ -29,6 +29,8 @@ public class Vehiculo extends AbstractEntity implements Serializable {
 	@Column(name = "color", length = 50)
 	private String color;
 
+
+
 	@Column(name = "precio")
 	private Double precio;
 
@@ -43,6 +45,13 @@ public class Vehiculo extends AbstractEntity implements Serializable {
 		super();
 		this.cliente = cliente;
 		this.matricula = matricula;
+	}
+	
+	public Vehiculo(String modelo, String color, Double precio) {
+		super();
+		this.modelo = modelo;
+		this.color = color;
+		this.precio = precio;
 	}
 
 	public Vehiculo(int id, Cliente cliente, Concesionario concesionario, String matricula, String modelo, String color,
