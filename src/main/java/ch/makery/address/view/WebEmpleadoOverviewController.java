@@ -242,6 +242,7 @@ public class WebEmpleadoOverviewController {
 					alert.setContentText("Bienvenid@ " + empleado.getNombre() + " " + empleado.getApellido());
 					alert.showAndWait();
 					btnLogout.setVisible(true);
+					tituloSuperior.setText("INICIO");
 					concesionariosPane.setVisible(true);
 				} else {
 					alert.setHeaderText("ERROR");
@@ -255,6 +256,10 @@ public class WebEmpleadoOverviewController {
 			}
 
 			limpiarLogin();
+		} else {
+			alert.setHeaderText("ERROR");
+			alert.setContentText("Rellene todos los campos");
+			alert.showAndWait();
 		}
 
 	}
@@ -272,7 +277,7 @@ public class WebEmpleadoOverviewController {
 	void logOut(ActionEvent event) {
 		tituloSuperior.setText("LOGIN");
 
-		btnLogout.setVisible(true);
+		btnLogout.setVisible(false);
 		listaClientesClientesBtt.setVisible(false);
 		listaClientesPropuestasBtt.setVisible(false);
 
@@ -655,8 +660,8 @@ public class WebEmpleadoOverviewController {
 	}
 
 	private void contactar() {
-		alert.setHeaderText("ERROR");
-		alert.setContentText("N�MERO:      657029888\nEMAIL: Mancinelly@soporteapp.com");
+		alert.setHeaderText("NO ACCESS");
+		alert.setContentText("No tienes acceso suficiente para ingresar aquí");
 		alert.showAndWait();
 	}
 

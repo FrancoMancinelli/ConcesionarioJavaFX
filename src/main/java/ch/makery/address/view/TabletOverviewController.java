@@ -406,7 +406,7 @@ public class TabletOverviewController {
 	 */
 	@FXML
 	void forgotPassword(MouseEvent event) {
-		alert.setHeaderText("CONTACTE CON SOPORTE");
+		alert.setHeaderText("ERROR - CONTACTE CON SOPORTE");
 		alert.setContentText("NUMERO: 657029888 \nEMAIL: mancinelly@soporteapp.com");
 		alert.showAndWait();
 	}
