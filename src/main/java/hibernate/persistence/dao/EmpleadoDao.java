@@ -2,7 +2,6 @@ package hibernate.persistence.dao;
 
 import java.util.List;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.resource.transaction.spi.TransactionStatus;
@@ -11,6 +10,7 @@ import hibernate.persistence.interfaces.EmpleadoDaoInterface;
 import hibernate.persistence.models.Concesionario;
 import hibernate.persistence.models.Director;
 import hibernate.persistence.models.Empleado;
+import hibernate.persistence.models.Vendedor;
 
 public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInterface {
 
@@ -105,22 +105,20 @@ public class EmpleadoDao extends ACommonDao<Empleado> implements EmpleadoDaoInte
 	}
 	
 	public boolean esVendedor(int id) {
-		// Verificaci�n de sesi�n abierta
-		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
-			session.getTransaction().begin();
-		}
+	    // Verificación de sesión abierta
+	    if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
+	        session.getTransaction().begin();
+	    }
 
-		Director director = null;
+	    Vendedor vendedor = session.get(Vendedor.class, id);
 
-		director = (Director) session.createQuery("FROM Vendedor WHERE id = '" + id + "'").uniqueResult();
-
-		if (director != null && director.getId() == id) {
-			return true;
-		} else {
-			return false;
-		}
-
+	    if (vendedor != null && vendedor.getEmpleado().getId() == id) {
+	        return true;
+	    } else {
+	        return false;
+	    }
 	}
+
 
 
 	@Override

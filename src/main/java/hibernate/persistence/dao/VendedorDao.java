@@ -2,6 +2,7 @@ package hibernate.persistence.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.resource.transaction.spi.TransactionStatus;
 
@@ -26,7 +27,7 @@ public class VendedorDao extends ACommonDao<Vendedor> implements VendedorDaoInte
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Vendedor> buscarPorNombre(String nombre) {
-		// Verificación de sesión abierta
+		// Verificaciï¿½n de sesiï¿½n abierta
 		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
 			session.getTransaction().begin();
 		}
@@ -38,12 +39,16 @@ public class VendedorDao extends ACommonDao<Vendedor> implements VendedorDaoInte
 
 	@Override
 	public Vendedor buscarPorId(int id) {
-		// Verificación de sesión abierta
-		if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
-			session.getTransaction().begin();
-		}
+	    // VerificaciÃ³n de sesiÃ³n abierta
+	    if (session.getTransaction().getStatus() != TransactionStatus.ACTIVE) {
+	        session.getTransaction().begin();
+	    }
 
-		return (Vendedor) session.createQuery("FROM Vendedor WHERE id ='" + id + "'");
+	    Query query = session.createQuery("FROM Vendedor WHERE id ='" + id + "'");
+	    Vendedor vendedor = (Vendedor) query.uniqueResult();
+
+	    return vendedor;
 	}
+
 
 }

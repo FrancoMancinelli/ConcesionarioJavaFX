@@ -51,7 +51,7 @@ public class WebEmpleadoOverviewController {
 
 	private Session session = HibernateUtil.getSessionFactory().openSession();
 
-	private Vendedor vendedor;
+	private Vendedor vendedor = new Vendedor();
 	private EmpleadoDao empleadoDao = new EmpleadoDao(session);
 	private PropuestaDao propuestaDao = new PropuestaDao(session);
 	private ClienteDao clienteDao = new ClienteDao(session);
@@ -229,25 +229,31 @@ public class WebEmpleadoOverviewController {
 	 */
 	@FXML
 	void singIn(ActionEvent event) {
-		Empleado empleado;
+		Empleado empleado = new Empleado();
 
 		if (!tflUsername.getText().isEmpty() && !tflPassword.getText().isEmpty()) {
 			empleado = empleadoDao.buscarPorUserAndPass(tflUsername.getText(), tflPassword.getText());
-
-			if (empleado.equals(null) && empleadoDao.esVendedor(empleado.getId())) {
-				vendedor = vendedorDao.buscarPorId(empleado.getId());
+			
+			
+			if(empleado != null) {
+				if(empleadoDao.esVendedor(empleado.getId())) {
+					vendedor = vendedorDao.buscarPorId(empleado.getId());
+					alert.setHeaderText("Usuario Correcto");
+					alert.setContentText("Bienvenid@ " + empleado.getNombre() + " " + empleado.getApellido());
+					alert.showAndWait();
+					btnLogout.setVisible(true);
+					concesionariosPane.setVisible(true);
+				} else {
+					alert.setHeaderText("ERROR");
+					alert.setContentText("Solo vendedores tienen acceso a esta área");
+					alert.showAndWait();
+				}
+			} else {
 				alert.setHeaderText("Informaci�n Iconrrecta");
 				alert.setContentText("Intentelo de nuevo...");
 				alert.showAndWait();
-
-			} else {
-
-				alert.setHeaderText("Usuario Correcto");
-				alert.setContentText("Bienvenid@ " + empleado.getNombre() + " " + empleado.getApellido());
-				alert.showAndWait();
-				btnLogout.setVisible(true);
-				concesionariosPane.setVisible(true);
 			}
+
 			limpiarLogin();
 		}
 
@@ -538,7 +544,12 @@ public class WebEmpleadoOverviewController {
 		Propuesta propuesta = new Propuesta(vendedor, c, vehiculo,
 				Double.parseDouble(formularioPropuestaPrecio.getText()), formularioPropuestaDetalles.getText());
 
-		PropuestaId p = new PropuestaId(vendedor.getEmpleado().getId(), c.getId(), vehiculo.getId());
+		Empleado empleado = vendedor.getEmpleado();
+		System.out.println(empleado.getId());
+		System.out.println(c.getId());
+		System.out.println(vehiculo.getId());
+
+		PropuestaId p = new PropuestaId(empleado.getId(), c.getId(), vehiculo.getId());
 
 		propuesta.setId(p);
 		propuestaDao.insert(propuesta);

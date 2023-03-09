@@ -36,6 +36,8 @@ public class PropuestaId extends AbstractEntity implements Serializable {
 		this.fecha = LocalDate.now();
 	}
     
+    
+    
     public PropuestaId() {
 		super();
 	}
