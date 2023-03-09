@@ -33,6 +33,18 @@ public class Propuesta extends AbstractEntity implements Serializable {
 	@Column(name = "vendido", nullable = false)
 	private Boolean vendido = false;
 
+	@Column(name = "detalles")
+    private String detalles;
+
+	public String getDetalles() {
+		return detalles;
+	}
+
+
+	public void setDetalles(String detalles) {
+		this.detalles = detalles;
+	}
+
 
 	public Propuesta() {
 		super();

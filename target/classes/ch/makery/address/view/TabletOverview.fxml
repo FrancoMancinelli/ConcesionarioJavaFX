@@ -27,7 +27,7 @@
 	<children>
 
 		<!-- Panel Inferior Azul Con Botones -->
-		<Pane fx:id="barraInferiorPane" layoutX="5.0" layoutY="839.0" prefHeight="61.0" prefWidth="645.0" style="-fx-background-color: #2B4162;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+		<Pane fx:id="barraInferiorPane" layoutX="-6.0" layoutY="840.0" prefHeight="61.0" prefWidth="645.0" style="-fx-background-color: #2B4162;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0">
 			<children>
             <Pane fx:id="inicioBtt" layoutX="90.0" layoutY="8.0" onMouseClicked="#goToInicio" onMousePressed="#goToInicio" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #F1E7CA;" visible="false">
                <children>
@@ -313,7 +313,7 @@
 		</Pane>
 
       		<!-- Panel Trabajo Pendientes -->
-		<Pane fx:id="trabajoPendientePane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;">
+		<Pane fx:id="trabajoPendientePane" layoutY="61.0" prefHeight="779.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" visible="false">
 			<children>
       				<ImageView fitHeight="779.0" fitWidth="645.0" opacity="0.3" pickOnBounds="true">
       					<image>
@@ -460,7 +460,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button fx:id="listaClientesBuscarBtt" layoutX="441.0" layoutY="55.0" mnemonicParsing="false" onAction="#listaClientesBuscar" prefHeight="55.0" prefWidth="176.0" style="-fx-background-color: #f1e7ca; -fx-border-color: #000000;" text="BUSCAR">
+            <Button fx:id="listaClientesBuscarBtt" layoutX="441.0" layoutY="55.0" mnemonicParsing="false" onAction="#listaClientesBuscar" prefHeight="55.0" prefWidth="176.0" style="-fx-background-color: #f1e7ca;" text="BUSCAR">
                <font>
                   <Font name="Malgun Gothic" size="20.0" />
                </font>
@@ -472,7 +472,7 @@
                <content>
                   <VBox fx:id="vBoxListaClientes" prefHeight="600.0" prefWidth="555.0" spacing="15.0" style="fx-background-color: transparent;">
                      <padding>
-                        <Insets left="20.0" right="20.0" />
+                        <Insets left="20.0" right="20.0" top="15.0" />
                      </padding></VBox>
                </content>
                <padding>
@@ -490,51 +490,51 @@
 						<Image url="file:/C:/Users/franc/OneDrive/Documentos/DAM2/ACC_DATOS/conce2/resources/barcelona.jpg" />
 					</image>
 				</ImageView>
-            <Pane layoutX="25.0" layoutY="46.0" prefHeight="694.0" prefWidth="595.0" style="-fx-background-color: #FFFFFF;">
+            <Pane fx:id="paneContenidoFichaCliente" layoutX="25.0" layoutY="46.0" prefHeight="694.0" prefWidth="595.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Label fx:id="labelNombreApellidos" alignment="CENTER" layoutX="80.0" layoutY="237.0" prefHeight="143.0" prefWidth="426.0" text="Ana María González" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Tahoma Bold" size="36.0" />
                      </font>
                   </Label>
-                  <Pane layoutX="42.0" layoutY="361.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                  <Pane fx:id="paneContenidoDNI" layoutX="42.0" layoutY="361.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
                      <children>
                         <Label layoutX="7.0" layoutY="20.0" text="DNI:">
                            <font>
-                              <Font name="Corbel" size="24.0" />
+                              <Font name="Corbel Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelDNI" layoutX="52.0" layoutY="16.0" text=" 12345678A" textFill="#5e5e5e">
+                        <Label fx:id="labelDNI" layoutX="60.0" layoutY="20.0" text=" 12345678A" textFill="#5e5e5e">
                            <font>
-                              <Font name="Cascadia Mono Regular" size="26.0" />
+                              <Font name="Cascadia Mono Regular" size="22.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="42.0" layoutY="470.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                  <Pane fx:id="paneContenidoDireccion" layoutX="42.0" layoutY="470.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
                      <children>
                         <Label layoutX="7.0" layoutY="20.0" text="DIRECCIÓN:">
                            <font>
-                              <Font name="Corbel" size="24.0" />
+                              <Font name="Corbel Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelDireccion" layoutX="131.0" layoutY="16.0" prefHeight="30.0" prefWidth="358.0" text=" Calle Pablo Picasso 23, Málaga" textFill="#5e5e5e" textOverrun="CLIP">
+                        <Label fx:id="labelDireccion" alignment="CENTER" layoutX="140.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" text=" Calle Pablo Picasso 23, Málaga" textFill="#5e5e5e" textOverrun="CLIP">
                            <font>
-                              <Font name="Cascadia Mono Regular" size="26.0" />
+                              <Font name="Cascadia Mono Regular" size="19.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="42.0" layoutY="579.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
+                  <Pane fx:id="paneContenidoTelefono" layoutX="42.0" layoutY="579.0" prefHeight="70.0" prefWidth="519.0" style="-fx-background-color: #f1e7ca;">
                      <children>
                         <Label layoutX="7.0" layoutY="20.0" text="TELÉFONO:">
                            <font>
-                              <Font name="Corbel" size="24.0" />
+                              <Font name="Corbel Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelTelefono" layoutX="129.0" layoutY="16.0" prefHeight="30.0" prefWidth="358.0" text=" 600892154" textFill="#5e5e5e" textOverrun="CLIP">
+                        <Label fx:id="labelTelefono" layoutX="140.0" layoutY="18.0" prefHeight="30.0" prefWidth="358.0" text=" 600892154" textFill="#5e5e5e" textOverrun="CLIP">
                            <font>
-                              <Font name="Cascadia Mono Regular" size="26.0" />
+                              <Font name="Cascadia Mono Regular" size="22.0" />
                            </font>
                         </Label>
                      </children>

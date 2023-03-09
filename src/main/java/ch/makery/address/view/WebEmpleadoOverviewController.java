@@ -34,6 +34,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import utils.CustomListaWebEmpleado;
 import utils.HibernateUtil;
 
 public class WebEmpleadoOverviewController {
@@ -180,6 +181,9 @@ public class WebEmpleadoOverviewController {
 
 	@FXML
 	private VBox vBox;
+	
+	@FXML
+	private Pane listaPropuestasPane;
 
 	// Reference to the main application.
 	private TabletMecanicoApp WebEmpleadoApp;
@@ -237,6 +241,8 @@ public class WebEmpleadoOverviewController {
 			}
 			resetearCamposLogIn();
 		}
+		
+		verListaDePropuestas(event);
 
 	}
 
@@ -362,6 +368,23 @@ public class WebEmpleadoOverviewController {
 	void resetearCamposLogIn() {
 		tflUsername.clear();
 		tflPassword.clear();
+	}
+	
+	
+	@FXML
+	void verListaDePropuestas(ActionEvent event) {
+		listaPropuestasPane.setVisible(true);
+
+		vBox.getChildren().clear();
+
+		listaPropuestas = propuestaDao.listarTodos();
+		vBox.setMaxHeight(10000);
+
+		for (Propuesta p : listaPropuestas) {
+				CustomListaWebEmpleado customPane = new CustomListaWebEmpleado(p);
+				vBox.getChildren().add(customPane);
+		}
+
 	}
 
 }

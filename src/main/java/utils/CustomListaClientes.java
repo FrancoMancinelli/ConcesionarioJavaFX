@@ -16,6 +16,8 @@ public class CustomListaClientes extends Pane {
 		setPrefSize(550, 60);
 		setStyle("-fx-background-color: #FFFFFF;");
 
+        getStyleClass().add("custom-pane");
+        button.getStyleClass().add("custom-btn");
 		
 		Label label = new Label(cliente.getNombre() + " " + cliente.getApellido());
 

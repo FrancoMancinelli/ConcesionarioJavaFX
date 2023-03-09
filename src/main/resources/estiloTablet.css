@@ -1,30 +1,30 @@
 #tflUsername, #tflPassword, #paneCandado, #paneUsuario, #paneCorreo,
 #panePass, #paneContenedorInicio, #fichasClientesDireBtt, 
 #trabajoPendienteDireBtt, #registrarVehiculoDireBtt,
-#paneContieneInicio2 {
-	-fx-background-radius: 20px 20px 20px 20;
+#paneContieneInicio2, #paneContenidoFichaCliente {
+	-fx-background-radius: 20.0px 20.0px 20.0px 20.0;
 }
 
 #LogInBtt {
-    -fx-font-size: 32px; /* Aumenta el tamaño de la letra a 20 píxeles */
-	-fx-background-radius: 20px 20px 20px 20;
+    -fx-font-size: 32.0px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20.0px 20.0px 20.0px 20.0;
 	-fx-font-weight: bold; /* Hace que el texto sea bold */
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.5), 10.0, 0.0, 3.0, 3.0); /* Agrega sombreado */
 }
 
 #labelHiUsernameJefe, #labelGoodMorning, #labelHiUsernameEmpleado {
-		-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+		-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.5), 10.0, 0.0, 3.0, 3.0); /* Agrega sombreado */
 }
 
 #fichasClientesDireBtt, #trabajoPendienteDireBtt, #registrarVehiculoDireBtt,
 #fichasClientesEmpBtt, #TrabajoPendienteEmpBtt {
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4); /* Agrega sombreado */
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.3), 10.0, 0.0, 0.0, 4.0); /* Agrega sombreado */
 	-fx-wrap-text: true;
 	-fx-text-alignment: center; /* Centra el texto dentro de los botones */
 }
 
 #listaClientesBtt, #trabajoPendienteBtt, #inicioBtt, #listaClientesBuscar {
-		-fx-background-radius: 10px 10px 10px 10;
+		-fx-background-radius: 10.0px 10.0px 10.0px 10.0;
 	
 }
 
@@ -35,31 +35,71 @@
 #fichaTrabajoPTiempo, #fichaTrabajoPPresupuestoTaller, #fichaTrabajoPMecanico,
 #fichaTrabajoPPresupuestoCliente, #fichaTrabajoPDiagnostico,
 #fichaTrabajoPFechaInicio, #fichaTrabajoPFechaFin, #fichaTrabajoPClienteIdBtt {
--fx-background-radius: 12px 12px 12px 12;
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 4); /* Agrega sombreado */
+-fx-background-radius: 12.0px 12.0px 12.0px 12.0;
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.5), 10.0, 0.0, 0.0, 4.0); /* Agrega sombreado */
 }
 
 #registroVehiculoBotonAnadir, #fichaTrabajoPIniciarBtt, #fichaTrabajoPTerminarBtt {
-    -fx-font-size: 24px;
+    -fx-font-size: 24.0px;
     -fx-font-weight: bold; /* Hace que el texto sea bold */
-	-fx-background-radius: 15px 15px 15px 15px;
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Agrega sombreado */
+	-fx-background-radius: 15.0px 15.0px 15.0px 15.0px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.3), 10.0, 0.0, 4.0, 4.0); /* Agrega sombreado */
 
 }
 
 #fichaTrabajoPAnteriorBtt, #fichaTrabajoPSiguienteBtt {
--fx-background-radius: 100px 100px 100px 100px;
-	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 3); /* Agrega sombreado */
+-fx-background-radius: 100.0px 100.0px 100.0px 100.0px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.2), 15.0, 0.0, 0.0, 3.0); /* Agrega sombreado */
 }
 
 #listaClientesBuscarBtt {
--fx-font-size: 20px; /* Aumenta el tamaño de la letra a 20 píxeles */
-	-fx-background-radius: 20px 20px 20px 20;
+-fx-font-size: 20.0px; /* Aumenta el tamaño de la letra a 20 píxeles */
+	-fx-background-radius: 20.0px 20.0px 20.0px 20.0;
 	-fx-font-weight: bold; /* Hace que el texto sea bold */
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 3); /* Agrega sombreado */
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.5), 10.0, 0.0, 3.0, 3.0); /* Agrega sombreado */
 }
 
 #vBoxListaClientes {
-		-fx-background-radius: 15px 15px 15px 15px;
+		-fx-background-radius: 15.0px 15.0px 15.0px 15.0px;
 	
 }
+
+.custom-pane {
+    -fx-background-radius: 10.0;
+    	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 3); /* Agrega sombreado */
+    
+}
+
+.custom-btn {
+    -fx-background-radius: 10;
+    -fx-font-size: 14pt; /* Tamaño de fuente */
+    -fx-font-weight: bold; /* Peso de la fuente */
+}
+
+#paneContenidoDNI, #paneContenidoDireccion, #paneContenidoTelefono {
+			-fx-background-radius: 15.0px 15.0px 15.0px 15.0px;
+	    	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 3); /* Agrega sombreado */
+	
+}
+
+#imagenFicha {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 5)
+}
+
+#labelNombreApellidos {
+		-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 7, 0, 3, 2)
+	
+}
+
+#logOutBtt {
+	-fx-background-radius: 10px 10px 10px 10px;
+	    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 3); /* Agrega sombreado */
+}
+
+#labelDireccion {
+    -fx-alignment: center-left; /* Centra la etiqueta horizontalmente */
+    -fx-wrap-text: true; /* Envuelve el texto de la etiqueta automáticamente */
+    -fx-font-size: 18pt; /* Tamaño de fuente */
+
+}
+
