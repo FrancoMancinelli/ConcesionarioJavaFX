@@ -35,7 +35,7 @@ CREATE TABLE `empleado` (
   PRIMARY KEY (`id`),
   KEY `fk_id_concesionario1` (`id_concesionario`),
   CONSTRAINT `fk_id_concesionario1` FOREIGN KEY (`id_concesionario`) REFERENCES `concesionario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `empleado` (
 
 LOCK TABLES `empleado` WRITE;
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
-INSERT INTO `empleado` VALUES (1,'11111111A',1,'Ysabel','Suárez','Calle San Juan 5',610123456,'y','y'),(2,'22222222B',1,'Franco','Mancinelli','Calle Nueva 7',610987654,'f','f'),(3,'33333333E',1,'Carlos','García','Calle Gran Vía 1',600111222,'c','c'),(4,'44444444E',1,'Laura','Hernández','Calle Alcalá 2',600222333,'l','l'),(5,'55555555E',1,'Alvaro','González','Calle Acacias 34',623445232,'a','a');
+INSERT INTO `empleado` VALUES (1,'11111111A',1,'Ysabel','Suárez','Calle San Juan 5',610123456,'y','y'),(2,'22222222B',1,'Franco','Mancinelli','Calle Nueva 7',610987654,'f','f'),(3,'33333333E',1,'Carlos','García','Calle Gran Vía 1',600111222,'c','c'),(4,'44444444E',1,'Laura','Hernández','Calle Alcalá 2',600222333,'l','l'),(5,'55555555E',1,'Alvaro','González','Calle Acacias 34',623445232,'a','a'),(6,'12345678A',1,'dadsadsa','asda','asdaa',888888888,'dadsadsaa','adsdas');
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-09  7:47:38
+-- Dump completed on 2023-03-09 10:42:50

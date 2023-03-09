@@ -45,7 +45,7 @@ CREATE TABLE `propuesta` (
 
 LOCK TABLES `propuesta` WRITE;
 /*!40000 ALTER TABLE `propuesta` DISABLE KEYS */;
-INSERT INTO `propuesta` VALUES (5,1,4,'2022-06-20',20000,0,''),(5,2,3,'2022-12-16',15000,0,''),(5,3,2,'2023-01-04',10000,1,''),(5,4,1,'2023-03-05',20000,1,NULL),(5,5,7,'2023-01-29',16000,1,''),(5,7,8,'2023-03-01',10000,0,NULL),(5,8,9,'2023-02-15',25000,1,NULL);
+INSERT INTO `propuesta` VALUES (5,1,4,'2022-01-02',20000,0,''),(5,1,6,'2022-02-15',12500,1,'Regularly maintained, new tires'),(5,2,3,'2022-01-01',15000,0,''),(5,2,5,'2022-03-10',15000,0,'Great gas mileage, spacious interior'),(5,3,2,'2022-01-03',10000,1,''),(5,3,8,'2022-02-10',22000,0,'One owner, accident-free'),(5,4,7,'2022-02-05',18000,0,'Low mileage, excellent condition'),(5,5,9,'2022-03-01',27000,0,'Loaded with features, clean history');
 /*!40000 ALTER TABLE `propuesta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-09  7:47:36
+-- Dump completed on 2023-03-09 10:42:50

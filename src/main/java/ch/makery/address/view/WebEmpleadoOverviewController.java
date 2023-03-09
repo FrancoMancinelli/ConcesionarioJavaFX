@@ -191,7 +191,7 @@ public class WebEmpleadoOverviewController {
 	private Button formularioPropuestaAnadirBtt;
 
 	// Componentes CSS
-	private Pane paneGrid, paneContenedorLogin, paneCorreo, paneCandado, paneContenedorCorreo, paneContenedorPassword, paneContenedorRegistroPropuesta;
+	private Pane paneContenedorRegistroClientes, paneGrid, paneContenedorLogin, paneCorreo, paneCandado, paneContenedorCorreo, paneContenedorPassword, paneContenedorRegistroPropuesta;
 	
 	// Reference to the main application.
 	private TabletMecanicoApp WebEmpleadoApp;

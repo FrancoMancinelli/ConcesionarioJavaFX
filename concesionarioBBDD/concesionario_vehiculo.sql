@@ -45,7 +45,7 @@ CREATE TABLE `vehiculo` (
 
 LOCK TABLES `vehiculo` WRITE;
 /*!40000 ALTER TABLE `vehiculo` DISABLE KEYS */;
-INSERT INTO `vehiculo` VALUES (1,1,1,'4132 ABC','Seat Leon','Rojo',12000,'Coche'),(2,2,1,'8253 JKS','Opel Corsa','Blanco',9000,'Moto'),(3,3,1,'9204 LOP','Volkswagen Golf','Negro',11500,'Coche'),(4,4,1,'9201 DKS','Audi A3','Plata',17000,'Ciclomotor'),(5,5,1,'3792 IOE','Peugeot 308','Blanco',11000,'Coche'),(6,6,1,'8245 XHE','Renault Megane','Gris',12000,'Moto'),(7,7,1,'1268 MNR','Opel Astra','Rojo',11000,'Moto'),(8,8,1,'9239 HAW','Volkswagen Polo','Azul',10000,'Moto'),(9,NULL,1,'7821 JTY','Ford Focus','Azul',10500,'Coche'),(10,NULL,1,'2833 SDO','Renault Clio','Gris',9500,'Ciclomotor'),(11,NULL,1,'6193 AZU','Citroen C4','Rojo',10500,'Coche'),(12,NULL,1,'4881 MLP','Fiat Punto','Rojo',8000,'Coche'),(13,NULL,1,'0922 HZX','Seat Ibiza','Azul',9500,'Moto'),(14,NULL,1,'9402 MFF','Ford Fiesta','Negro',9500,'Coche'),(15,NULL,1,'6583 HDK','Citroen DS3','Blanco',10500,'Ciclomotor');
+INSERT INTO `vehiculo` VALUES (1,1,1,'0','Seat Leon','Rojo',12000,'Coche'),(2,2,1,'0','Opel Corsa','Blanco',9000,'Moto'),(3,3,1,'0','Volkswagen Golf','Negro',11500,'Moto'),(4,4,1,'0','Audi A3','Plata',17000,'Ciclomotor'),(5,5,1,'0','Peugeot 308','Blanco',11000,'Coche'),(6,6,1,'0','Renault Megane','Gris',12000,'Moto'),(7,7,1,'0','Opel Astra','Rojo',11000,'Moto'),(8,8,1,'0','Volkswagen Polo','Azul',10000,'Coche'),(9,NULL,1,'0','Ford Focus','Azul',10500,'Coche'),(10,NULL,1,'0','Renault Clio','Gris',9500,'Coche'),(11,NULL,1,'0','Citroen C4','Rojo',10500,'Ciclomotor'),(12,NULL,1,'0','Fiat Punto','Rojo',8000,'Moto'),(13,NULL,1,'0','Seat Ibiza','Azul',9500,'Coche'),(14,NULL,1,'0','Ford Fiesta','Negro',9500,'Moto'),(15,NULL,1,'0','Citroen DS3','Blanco',10500,'Moto');
 /*!40000 ALTER TABLE `vehiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-09  7:47:37
+-- Dump completed on 2023-03-09 10:42:49
