@@ -10,6 +10,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * APLICACIÓN PARA LA WEB SOLO PARA DIRECTORES
+ * @author ysuar / fmancinelli
+ *
+ */
 public class WebJefeApp extends Application {
 
 	private Stage primaryStage;

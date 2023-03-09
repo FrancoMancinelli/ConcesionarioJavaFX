@@ -10,6 +10,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * APLICACIÓN PARA LA TABLET DE MECÁNICOS
+ * @author ysuar / fmancinelli
+ *
+ */
 public class TabletMecanicoApp extends Application {
 
 	private Stage primaryStage;
