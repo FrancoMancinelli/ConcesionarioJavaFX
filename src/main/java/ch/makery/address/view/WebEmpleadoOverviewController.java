@@ -525,6 +525,10 @@ public class WebEmpleadoOverviewController {
 		formularioPropuestaFecha.setText(LocalDate.now().toString());
 	}
 
+	/**
+	 * Método que registra una nueva propuesta
+	 * @param event
+	 */
 	@FXML
 	void registrarNuevoPropuestas(ActionEvent event) {
 		Cliente c = registroPrpuestasChoiceBox.getSelectionModel().getSelectedItem();
@@ -554,7 +558,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que rellena el gridPane con los datos de los clientes
 	 * @param datos
 	 */
 	void listaClientesRellenarGrid(List<String[]> datos) {
@@ -579,7 +583,7 @@ public class WebEmpleadoOverviewController {
 
 
 	/**
-	 * 
+	 * Método que extrae de la base de datos los datos de los clientes
 	 * @param listaClientes
 	 * @return
 	 */
@@ -597,7 +601,7 @@ public class WebEmpleadoOverviewController {
 	}
 
 	/**
-	 * 
+	 * Método que comprueba si el formulario esta o no vacio
 	 * @return
 	 */
 	private boolean formularioRegistroVacio() {
@@ -609,6 +613,10 @@ public class WebEmpleadoOverviewController {
 		return false;
 	}
 
+	/**
+	 * Método que comprueba si un telefono es valido
+	 * @return
+	 */
 	private boolean telefonoValido() {
 		String telefono = registroTxfTelefono.getText();
 		if (telefono.length() != 9) {
@@ -622,6 +630,10 @@ public class WebEmpleadoOverviewController {
 		return true;
 	}
 
+	/**
+	 * Método que comprueba si un DNI es valido
+	 * @return
+	 */
 	private boolean dniValido() {
 		String dni = registroTxfDNI.getText();
 		if (dni.length() == 9 && Character.isLetter(dni.charAt(dni.length() - 1))) {
